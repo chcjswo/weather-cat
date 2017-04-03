@@ -5,12 +5,12 @@ sudo: false
 before_install:
    - gem install fastlane
 
-     #install:
-      #- pod install
+install:
+   - pod install
 
 before_script:
     - fastlane snapshot reset_simulators --force
 
 script:
-    - xcodebuild clean build test -project FcManualLayoutFrame.xcodeproj -scheme FcManualLayoutFrame -destination "platform=iOS Simulator,name=iPhone 7,OS=10.2"
+    - xcodebuild clean build -project weather-cat.xcodeproj -scheme weather-cat -destination "platform=iOS Simulator,name=iPhone 7,OS=10.2"
 
